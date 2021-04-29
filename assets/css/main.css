@@ -137,7 +137,7 @@ img {
 /* Header Section Start */
 #header {
   width: 100%;
-  background: url(../img/backgrounds/bg.jpg);
+  background: url(../img/backgrounds/download.png);
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -215,7 +215,7 @@ img {
 #header .banner h2 {
   color: #ffffff;
   font-size: 45px;
-  margin: 32px 0px 50px;
+  margin: 32px 0px 40px;
 }
 #header .banner .scroll {
   margin: 50px 0;
@@ -681,3 +681,8 @@ img {
   color: #6c9c01;
 }
 /* Footer Section End */
+
+#salute {
+  font-size: large;
+  margin: 32px 0px 50px;
+}
