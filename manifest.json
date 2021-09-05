@@ -1,11 +1,11 @@
 {
-    "name": "Kalela portfolio",
-    "short_name": "kalela portfolio",
+    "name": "potrtfolio",
+    "short_name": "potrtfolio",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Flutter web project for my portfolio",
+    "description": "A new Flutter project.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
