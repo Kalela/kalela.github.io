@@ -1,59 +1,49 @@
-# Portfolio
+# kalela.github.io
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.6.
+Personal portfolio for **Philip Kalela** — software engineer, Nairobi, Kenya.
+Live at **https://kalela.github.io**.
 
-## Development server
+Built with **Angular** and **statically prerendered** (SSG) so every page ships as
+real, crawlable HTML — chosen specifically for good SEO (the previous Flutter-web
+build rendered to canvas and was effectively invisible to search and social crawlers).
 
-To start a local development server, run:
+## Stack
 
-```bash
-ng serve
-```
+- Angular 22, standalone components, SCSS
+- `@angular/ssr` static prerender (`outputMode: static`, `baseHref: /`)
+- Font Awesome icon data rendered as inline SVG (no icon font)
+- Deployed to GitHub Pages via GitHub Actions
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Develop
 
 ```bash
-ng generate --help
+npm install
+npm start          # dev server at http://localhost:4200
 ```
 
-## Building
-
-To build the project run:
+## Build & verify
 
 ```bash
-ng build
+npm run build      # prerenders to dist/portfolio/browser (+ 404.html, .nojekyll)
+npm run verify     # asserts the prerendered HTML contains the real content + JSON-LD
+npm test -- --watch=false   # unit tests
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Deploy
 
-## Running unit tests
+Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds, verifies, and
+publishes `dist/portfolio/browser` to GitHub Pages.
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+**One-time setup:** in this repo's **Settings → Pages → Build and deployment**, set
+**Source** to **GitHub Actions** (instead of "Deploy from a branch").
 
-```bash
-ng test
-```
+## Content
 
-## Running end-to-end tests
+Page content lives in typed data modules under `src/app/data/` (projects, experience,
+certifications, social links, profile). Edit those to update the site. The Meet My Blank
+card uses a placeholder image at `public/assets/images/work/meetmyblank.svg` — replace it
+with a real screenshot and update `src/app/data/projects.ts`.
 
-For end-to-end (e2e) testing, run:
+---
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Design credited to [Tushar Nikam](https://champ96k.github.io/#/); adapted by Philip Kalela.
