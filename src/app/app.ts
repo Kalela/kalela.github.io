@@ -5,6 +5,7 @@ import { EmailRailComponent } from './layout/email-rail.component';
 import { ScrollSpyService } from './layout/scroll-spy.service';
 import { HeroComponent } from './sections/hero/hero.component';
 import { AboutComponent } from './sections/about/about.component';
+import { ProjectsComponent } from './sections/projects/projects.component';
 
 const SECTION_IDS = [
   'about',
@@ -23,6 +24,7 @@ const SECTION_IDS = [
     EmailRailComponent,
     HeroComponent,
     AboutComponent,
+    ProjectsComponent,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
