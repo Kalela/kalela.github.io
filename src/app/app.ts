@@ -7,6 +7,7 @@ import { HeroComponent } from './sections/hero/hero.component';
 import { AboutComponent } from './sections/about/about.component';
 import { ProjectsComponent } from './sections/projects/projects.component';
 import { ExperienceComponent } from './sections/experience/experience.component';
+import { CertificationsComponent } from './sections/certifications/certifications.component';
 
 const SECTION_IDS = [
   'about',
@@ -27,6 +28,7 @@ const SECTION_IDS = [
     AboutComponent,
     ProjectsComponent,
     ExperienceComponent,
+    CertificationsComponent,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
