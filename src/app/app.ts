@@ -8,6 +8,7 @@ import { AboutComponent } from './sections/about/about.component';
 import { ProjectsComponent } from './sections/projects/projects.component';
 import { ExperienceComponent } from './sections/experience/experience.component';
 import { CertificationsComponent } from './sections/certifications/certifications.component';
+import { ContactComponent } from './sections/contact/contact.component';
 
 const SECTION_IDS = [
   'about',
@@ -29,6 +30,7 @@ const SECTION_IDS = [
     ProjectsComponent,
     ExperienceComponent,
     CertificationsComponent,
+    ContactComponent,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
