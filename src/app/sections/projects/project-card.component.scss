@@ -1,13 +1,12 @@
+:host {
+  display: block;
+}
+
 .card {
   position: relative;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
-  margin-bottom: clamp(3rem, 8vh, 6rem);
-}
-
-.card:last-child {
-  margin-bottom: 0;
 }
 
 .media {

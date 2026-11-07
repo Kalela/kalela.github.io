@@ -21,6 +21,7 @@ import { PROJECTS } from '../../data/projects';
       .list {
         display: flex;
         flex-direction: column;
+        gap: clamp(3.5rem, 9vh, 7rem);
       }
     `,
   ],
