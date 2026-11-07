@@ -6,6 +6,7 @@ import { ScrollSpyService } from './layout/scroll-spy.service';
 import { HeroComponent } from './sections/hero/hero.component';
 import { AboutComponent } from './sections/about/about.component';
 import { ProjectsComponent } from './sections/projects/projects.component';
+import { ExperienceComponent } from './sections/experience/experience.component';
 
 const SECTION_IDS = [
   'about',
@@ -25,6 +26,7 @@ const SECTION_IDS = [
     HeroComponent,
     AboutComponent,
     ProjectsComponent,
+    ExperienceComponent,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
