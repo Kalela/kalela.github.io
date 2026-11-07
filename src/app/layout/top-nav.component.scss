@@ -1,0 +1,82 @@
+.nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem var(--gutter);
+  background: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(100, 255, 218, 0.08);
+}
+
+.caret {
+  color: var(--teal);
+  font-size: 1.6rem;
+  display: inline-flex;
+}
+
+.tabs {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
+}
+
+.tab {
+  color: var(--slate-light);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.tab:hover,
+.tab.active {
+  color: var(--teal);
+  border-color: var(--teal);
+}
+
+.resume {
+  color: var(--teal);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--teal);
+  border-radius: 4px;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.resume:hover {
+  background: rgba(100, 255, 218, 0.1);
+}
+
+@media (max-width: 720px) {
+  .nav {
+    flex-wrap: wrap;
+    gap: 0.4rem 0.75rem;
+    padding: 0.6rem var(--gutter);
+  }
+  .caret {
+    font-size: 1.3rem;
+  }
+  .tabs {
+    order: 3;
+    flex-basis: 100%;
+    justify-content: flex-start;
+    gap: 0.25rem 0.9rem;
+  }
+  .tab {
+    font-size: 0.78rem;
+  }
+  .resume {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.78rem;
+  }
+}

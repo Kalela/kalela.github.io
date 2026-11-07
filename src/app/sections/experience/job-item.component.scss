@@ -1,0 +1,57 @@
+.job {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 1.25rem;
+  padding-bottom: 2.5rem;
+}
+
+.badge {
+  display: flex;
+  justify-content: center;
+}
+
+.badge img,
+.fa {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+}
+
+.fa {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.role {
+  color: var(--slate-light);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.company {
+  color: var(--teal);
+  font-weight: 500;
+}
+
+.company:hover {
+  text-decoration: underline;
+}
+
+.duration {
+  color: var(--slate-dark);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  margin: 0.35rem 0 0.75rem;
+}
+
+.desc {
+  color: var(--slate);
+  margin: 0;
+  font-size: 0.95rem;
+  max-width: 65ch;
+}

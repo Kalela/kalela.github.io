@@ -1,0 +1,53 @@
+.cert {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  background: var(--bg-light);
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  transition:
+    transform 0.2s,
+    border-color 0.2s;
+}
+
+.cert:hover {
+  transform: translateY(-4px);
+  border-color: rgba(100, 255, 218, 0.35);
+}
+
+.badge {
+  width: 96px;
+  height: 96px;
+  flex: none;
+  object-fit: contain;
+}
+
+.name {
+  color: var(--slate-light);
+  font-size: 1rem;
+  margin: 0 0 0.35rem;
+}
+
+.issuer {
+  color: var(--slate);
+  font-size: 0.85rem;
+  margin: 0 0 0.75rem;
+}
+
+.verify {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--teal);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.verify:hover {
+  text-decoration: underline;
+}
+
+.verify app-icon {
+  font-size: 0.7rem;
+}

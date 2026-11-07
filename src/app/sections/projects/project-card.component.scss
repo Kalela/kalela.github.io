@@ -1,0 +1,141 @@
+:host {
+  display: block;
+}
+
+.card {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+}
+
+.media {
+  grid-column: 1 / 8;
+  grid-row: 1;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(2, 12, 27, 0.6);
+}
+
+.media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  transition:
+    transform 0.3s,
+    filter 0.3s;
+  filter: saturate(0.85);
+}
+
+.media:hover img {
+  transform: scale(1.03);
+  filter: none;
+}
+
+.info {
+  grid-column: 6 / -1;
+  grid-row: 1;
+  text-align: right;
+  z-index: 2;
+}
+
+.eyebrow {
+  color: var(--teal);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  margin: 0 0 0.5rem;
+}
+
+.title {
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
+  margin: 0 0 1rem;
+}
+
+.title a {
+  color: var(--slate-light);
+}
+
+.title a:hover {
+  color: var(--teal);
+}
+
+.company {
+  display: block;
+  color: var(--slate);
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: 0.25rem;
+}
+
+.desc {
+  background: var(--panel);
+  color: var(--slate-light);
+  padding: 1.25rem 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(2, 12, 27, 0.5);
+  font-size: 0.95rem;
+}
+
+.desc p {
+  margin: 0;
+}
+
+.tech {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.4rem 1rem;
+  padding: 0;
+  margin: 1rem 0;
+  color: var(--slate);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.links a {
+  color: var(--slate-light);
+  font-size: 1.2rem;
+}
+
+.links a:hover {
+  color: var(--teal);
+}
+
+@media (max-width: 760px) {
+  .card {
+    display: block;
+  }
+  .media {
+    opacity: 0.25;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .media img {
+    height: 100%;
+    aspect-ratio: auto;
+  }
+  .info {
+    position: relative;
+    text-align: left;
+    padding: 1.5rem;
+    z-index: 2;
+  }
+  .desc {
+    background: rgba(23, 42, 69, 0.85);
+    backdrop-filter: blur(2px);
+  }
+  .tech,
+  .links {
+    justify-content: flex-start;
+  }
+}

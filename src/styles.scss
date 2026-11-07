@@ -1,0 +1,70 @@
+/* Global design tokens + base. Dark theme only (Brittany-Chiang palette). */
+:root {
+  --bg: #0a192f;
+  --bg-light: #112240;
+  --panel: #172a45;
+  --teal: #64ffda;
+  --teal-2: #61f9d5;
+  --slate-light: #ccd6f6;
+  --slate: #8892b0;
+  --slate-dark: #717c99;
+  --white: #e6f1ff;
+
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue",
+    Arial, sans-serif;
+  --font-mono: "SFMono-Regular", "Fira Code", "Roboto Mono", ui-monospace,
+    monospace;
+
+  --maxw: 1100px;
+  --gutter: clamp(16px, 5vw, 48px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--slate);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--slate-light);
+  line-height: 1.1;
+  margin: 0;
+}
+
+a {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

@@ -1,0 +1,27 @@
+.page {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 6rem var(--gutter) 3rem;
+}
+
+/* Clear the fixed social / email rails on wide screens. */
+@media (min-width: 1001px) {
+  .page {
+    padding-left: calc(var(--gutter) + 40px);
+    padding-right: calc(var(--gutter) + 40px);
+  }
+}
+
+.section {
+  scroll-margin-top: 5rem;
+  padding: clamp(3rem, 10vh, 7rem) 0;
+}
+
+.section--placeholder {
+  color: var(--slate-dark);
+  font-family: var(--font-mono);
+  border: 1px dashed rgba(100, 255, 218, 0.2);
+  border-radius: 6px;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
