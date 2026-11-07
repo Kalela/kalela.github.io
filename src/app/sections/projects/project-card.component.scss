@@ -1,7 +1,7 @@
 .card {
   position: relative;
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: repeat(12, 1fr);
   align-items: center;
   margin-bottom: clamp(3rem, 8vh, 6rem);
 }
