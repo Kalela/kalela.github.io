@@ -3,6 +3,7 @@ import { TopNavComponent } from './layout/top-nav.component';
 import { SideRailComponent } from './layout/side-rail.component';
 import { EmailRailComponent } from './layout/email-rail.component';
 import { ScrollSpyService } from './layout/scroll-spy.service';
+import { HeroComponent } from './sections/hero/hero.component';
 
 const SECTION_IDS = [
   'about',
@@ -15,7 +16,12 @@ const SECTION_IDS = [
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [TopNavComponent, SideRailComponent, EmailRailComponent],
+  imports: [
+    TopNavComponent,
+    SideRailComponent,
+    EmailRailComponent,
+    HeroComponent,
+  ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
